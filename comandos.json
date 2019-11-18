@@ -1,0 +1,19 @@
+{   "comandos": {
+
+        "ataque": ["1","2","atacar"],
+        "olhar" : ["olhar esquerda","5","6"]
+
+    },
+    "armas":{ 
+        "Espada": {
+            "caracteristicas": ["Feita de metal" , "Empunhadura para uma ou duas mãos " , "Objeto cortante" , "Pontiagudo" , "Usado por guerreiros"]
+        },
+        "Arco e flecha": {
+            "caractersticas": ["Feito de madeira" , "Atira projeteis" , "Uma linha une as duas pontas" , "Usado a longas distâncias" , "Usado por arqueiros"]
+        },
+        "Punhal": {
+            "caracteristicas": ["Feito de metal" , "Empunhadura para uma mão" , "Objeto cortante" , "Arma pequena" , "Usado por ladinos"]
+        }
+    }   
+        
+}

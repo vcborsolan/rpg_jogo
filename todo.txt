@@ -1,0 +1,39 @@
+interpretador por comandos explicitos => apenas uma palavra que gera uma dialogo com  mestre para formar o comando.
+    ex:
+        jogador: ataque
+        mestre: quem você gostaria de atacar?
+        jogador: alvo x
+        mestre : com  o que?
+        jogador: espada
+        acontece a jogada.
+
+    Que comandos haverão??
+
+        Perguntar ao mestre , ataque , olhar ,  ir para , roubar , defesa , fugir
+
+interpretador de comandos implicitos => quando comando for maior que 2 palavras
+    Procurar sobre classificador de texto.
+
+    'from textblob import TextBlob
+    'from textblob.classifiers import NaiveBayesClassifier
+        python -m textblob.download_corpora => precisa instalar essa parada Aqui
+
+
+Criar o servidor flask que vai receber a historia.
+
+
+Efeitos sonoros => dados , ambulancia -> violao , ...
+
+Como vai ser a demo:
+    "Imagine sua vida hoje , mas você se percebe idoso , sua pele está tão putrefada quanto o espirito que reside em seu corpo.
+     Suas memorias causam mais dores que seus ossos falerenetos que de pouco em pouco se desfazem e ao  cair da noite deitado a sua cama seu cérebro te recompensa com delírio e você acaba tendo um orgasmo que lhe causa o fechar dos olhos...
+     -- Aqui começa a tocar um som de sirene que de pouco em pouco começa a virar o som de um violão --
+     Como esta é sua primeira jornada vou lhe apresentar uma de nossas mais importantes dinâmicas , assimilar.
+     Esta ocorrerá baseado na sua sorte e seu conhecimento , em momentos aleatórios , cujo te possibilitará perceber caracteristicas de algo , caso você adivinhe você aprenderá o que é e poderá tirar vantagens dissso.
+     Voltando ao nosso contexto , você percebe que o instrumento tocado tem cordas , é feito de madeira , tem o formato de uma cabaça e combina com o canto e a poesia , tente adivinhar do que se trata:
+     -- se responder certo parabenizar , se errar quebrar o galho e dizer que é um violão --
+     Ok , voltando , você ao piscar os olhos repetidamente tentando entender o que é este diálogo em sua mente vê que o mundo parece ter um novo brilho e por mais que você entenda a superficie raza dos conhecimentos cotidianos você ainda tem muito a entender de como funciona este novo mundo.
+     -- NPC: Bem vindo estrangeiro a taberna do centauro invertido --
+
+     
+     "
