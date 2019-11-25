@@ -15,25 +15,19 @@ ouvinte = Ouvinte()
 
 narrador.narrar('O jogo vai começar', 'init' , False)
 t = narrador.narrar("Qual sua palavra chave?", "palavra chave" , False)
-# while t != True :
-#   sleep(0.1)
-# teste = ouvir_microfone()
-# if teste.lower() == "teste":
-if input("Digite aqui teste: \n") == "teste":
+if ouvinte.ouvir_microfone().lower() == "teste":
   narrador.narrar("Logado com sucesso!","login_sucess" , False)
   personagem = Personagem("" , 0 , 0 , 0 ,0 ,0, 0 , 0 , 0 , 0 ,0 ,0)
-  # ^^ aqui criar uma consulta de sql do personagem
+
   while True:
     if personagem.nome == "":
       narrador.narrar("Parece que ainda precisamos criar sua ficha antes de começar a jogar..." , "ficha_init" , False)
       narrador.narrar("Pegue um pedaço de papel para anotações , por mais que o mestre possa te lembrar de algum detalhe caso você pergunte , ele pode se cansar e ai já viu né" , "lembrete_anotacao" , False)
       while True:
         narrador.narrar("Me diga , qual o seu nome?" , "ficha_nome_input" , False)
-        # listen = ouvir_microfone()
-        listen = input("Digite seu nome: \n")
+        listen = ouvinte.ouvir_microfone()
         narrador.narrar(f'Tem certeza que seu nome é {listen} ?' , f"ficha_nome_confirmation_{listen}" , True)
-        # confirmation = ouvir_microfone()
-        confirmation = input("sim ou não? \n")
+        confirmation = ouvinte.ouvir_microfone()
         if confirmation.lower() == "sim":
           personagem.setNome(listen)
           break
@@ -51,8 +45,8 @@ if input("Digite aqui teste: \n") == "teste":
         narrador.narrar("Vou rolar os dados" ,"dices_alert" , False)
         narrador.rolar_dados()
         narrador.narrar(f"BVocê rolou . força {dados[0]} , habilidade {dados[1]} , resistência {dados[2]} , armadura {dados[3]} , poder de fogo {dados[4]} e carisma {dados[5]}" , "rolage_ficha" , True)
-        
-        confirmation = input("esta de acordo? \n")
+        narrador.narrar("COnfirme por favor se gostou diga sim , caso contrario não." , "confirmation_yes",False)        
+        confirmation = ouvinte.ouvir_microfone()
         if confirmation.lower() == "sim":
           personagem.setForça(dados[0])
           personagem.setHabilidade(dados[1])
@@ -72,6 +66,7 @@ if input("Digite aqui teste: \n") == "teste":
       narrador.repetir("jogo_prosseguir")
       narrador.narrar("Você tem alguma duvida quanto a sua ficha?" , "duvidas_ficha" , False)
       print(cl.classificar(input("Digite aqui sua duvida :\n"),personagem.getFicha()))
+      # print(cl.classificar(ouvinte.ouvir_microfone().lower(),personagem.getFicha())
 
 else:
   print("Deu errado")
